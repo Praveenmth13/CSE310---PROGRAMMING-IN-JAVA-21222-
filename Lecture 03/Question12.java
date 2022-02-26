@@ -7,3 +7,4 @@ public class PrintHello {
 		System.out.println("text3 = " + text3);
 	}
 }
+///
