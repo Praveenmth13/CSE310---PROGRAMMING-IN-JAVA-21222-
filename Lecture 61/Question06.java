@@ -27,3 +27,7 @@ Statement 2 and Statement 3 mean the same.
 Statement 4 will result in compilation errors, since both List and ArrayList are parameterized with E as type parameter, meaning they can accept only individual elements and not a String array.
 Compiler will produce a type conversion warning for Statement 5.
 Compiler will not produce a type conversion warning for Statement 6.
+
+  
+  
+  
