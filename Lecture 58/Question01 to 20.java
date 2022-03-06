@@ -271,3 +271,246 @@ public class HashMapIterationDemo {
 
 
 
+package q24086;
+import java.util.*;
+public class HashMapIterationDemo {
+	public static void main(String[] args) {
+		Map <String, String> namesMap = new HashMap <String, String>();
+		Set shortNamesSet = namesMap.keySet();
+		for(int i = 0;i<args.length;i++) {
+			// iterate over all the input argumetnts and add the (key,value) to the Map
+			// write your code here
+			String key = args[i].substring (0,2);
+			String value = args[i];
+			namesMap.put (key, value);
+			
+		}
+
+       // print the resultant map here
+       System.out.println (namesMap);
+		
+	}
+}
+
+
+
+
+package q24088;
+import java.util.*;
+public class HashMapIterationDemo {
+	public static void main(String[] args) {
+		Map <String, String> namesMap = new HashMap <String, String>();
+		for(int i=0;i<args.length;i++) {
+			// iterate over all the input argumetnts and add the (key,value) to the Map
+			// write your code here
+			namesMap.put(args[i].substring(0,1),args[i]);
+		}
+
+
+	//	Set shortNamesSet = namesMap.keySet();
+
+			// get all the keys and print the result
+			System.out.println(namesMap);
+			Set<String>keys = namesMap.keySet();
+			for(String ans:keys)
+			{
+				System.out.println(ans);
+				
+			}
+		}
+	}
+
+
+
+
+import java.util.*;
+public class HashMapIterationDemo {
+	public static void main(String[] args) {
+		Map <String, String> namesMap = new HashMap <String, String>();
+		Set shortNamesSet = namesMap.keySet();
+		for(int i=0;i<args.length;i++) {
+			// iterate over all the input argumetnts and add the (key,value) to the Map
+			// write your code here
+			namesMap.put(args[i].substring(0,2),args[i]);
+			if(i==0)
+			namesMap.put(args[i].substring(0,2),args[i]);
+		}
+		System.out.println(namesMap);
+		Set<String>ans= namesMap.keySet();
+		for( String key : ans) {
+			System.out.println(namesMap.get(key));
+
+			// get all the values and print the result
+		}
+	}
+}
+
+
+
+
+package q24099;
+import java.util.*;
+public class CharcountDemo {
+   public static void main(String[] args) {
+      String str = "CodeTantra";
+      HashMap <Character, Integer> namesMap = new HashMap<Character, Integer>();
+	  
+      	// write your code here
+      	char[] str_array = str.toCharArray();
+      	
+      	for (char c : str_array){
+      		
+      		if (namesMap.containsKey(c)){
+      			
+      			namesMap.put(c, namesMap.get(c) + 1);
+      			
+      		}else{
+      			
+      			namesMap.put(c, 1);
+      			
+      		}
+      		
+      	}
+      	
+      	
+      	
+      	System.out.println(namesMap);
+      	
+      	
+      	}
+}
+
+
+
+
+
+package q24100;
+import java.util.*;
+public class CharcountDemo {
+   public static void main(String[] args) {
+     String str=args[0];
+     
+      HashMap <Character, Integer> namesMap = new HashMap<Character, Integer>();
+      for (int i = str.length() - 1; i >= 0; i--) {
+      // write your code here
+      // Take input from the command line argument
+      // Find the occurrence of each character in the given string
+      char c = str.charAt(i);
+      
+      
+      	
+      	if (namesMap.containsKey(c)){
+      		
+      		namesMap.put(c, namesMap.get(c) + 1);
+      		
+      	}else{
+      		
+      		namesMap.put(c, 1);
+      		
+      	}
+      }	
+      System.out.println(namesMap);
+      
+      
+    }
+  }
+
+
+
+
+package q24101;
+import java.util.*;
+public class WordcountDemo {
+   public static void main(String[] args) {
+     HashMap<String, Integer> ans = new HashMap<String, Integer>();
+      // write your code here
+      // Take input from the command line argument
+      // Find the occurrence of each word in the given string
+
+ 
+ for (int i=0;i<args.length;i++){
+ 	String c=args[i];
+ 	if (ans.containsKey(c)){
+ 		
+ 		ans.put(c, ans.get(c) + 1);
+ 		
+ 	}else{
+ 		
+ 		ans.put(c, 1);
+ 		
+ 	}
+ 	
+ }
+ 
+ 
+ 
+ System.out.println(ans);
+ 
+ 	}
+}
+
+
+
+
+
+import java.util.*;
+public class TreeMapDemo {
+	public static void main(String[] args) {
+		Map<String, String> namesMap = new TreeMap<String, String>();
+		// Write your code here
+for(int i=0;i<args.length;i++) namesMap.put(args[i].substring(0,3),args[i]);
+
+		Set<String> nameSet = namesMap.keySet();
+		for (Object key : nameSet) {
+		// Write your code here
+System.out.println(key+" : "+namesMap.get(key));
+		
+		
+		}
+	}
+}
+
+
+
+
+package q24090;
+import java.util.*;
+public class TreeMapDemo {
+	public static void main(String[] args) {
+		Map<String, String> namesMap = new TreeMap<String, String>();
+		namesMap.put("Hy", "Hyderabad");
+        namesMap.put("Ban", "Bangalre");
+        namesMap.put("Ke","Kerala");
+        System.out.println(namesMap);
+        
+        // Find whether the given map contains the key Ban or not.
+        System.out.println(namesMap.containsKey("Ban"));
+	}
+}
+
+
+
+
+package q24093;
+import java.util.*;
+public class TreeMapDemo {
+	public static void main(String[] args) {
+		Map<String, String> namesMap = new TreeMap<String, String>();
+		
+		// Write your code 
+	for(int i=0;i<args.length;i++) namesMap.put(args[i].substring(0,3),args[i]);
+	
+
+		Set<String> nameSet = namesMap.keySet();
+		for (Object key : nameSet) {
+		// Write your code here
+		System.out.println(key+" : "+namesMap.get(key));
+		
+		
+		}
+		System.out.println("Is TreeMap empty "+namesMap.isEmpty());
+		
+		System.out.println("Size of TreeMap is "+namesMap.size());
+		
+	}
+}
