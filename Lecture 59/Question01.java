@@ -195,3 +195,95 @@ public class SetDemo {
 
 
 
+import java.util.*;
+public class SetDemo {
+	public static void main(String[] args) {
+		Set<String> namesSet = new HashSet <String> ();
+
+
+		// write your code here
+		namesSet.add("Five");
+		
+		namesSet.add("One");
+		
+		namesSet.add("Four");
+		
+		namesSet.add("Two");
+		
+		namesSet.add("Three");
+			
+		System.out.println(namesSet);
+
+		// write your code here
+		namesSet.remove("Two");
+		namesSet.remove("Three");
+
+		System.out.println(namesSet);
+	}
+}
+
+
+
+
+import java.util.*;
+public class SetDemo {
+	public static void main(String[] args) {
+		Set<String> namesSet = new HashSet <String> ();
+
+		// add days of week to the set using the method add
+		namesSet.add("Monday");
+
+		namesSet.add("Thursday");
+
+		namesSet.add("Friday");
+
+		namesSet.add("Sunday");
+
+		namesSet.add("Wednesday");
+
+		namesSet.add("Tuesday");
+
+		namesSet.add("Saturday");
+
+		System.out.println(namesSet);
+		System.out.println("Size of the set is " + namesSet.size());// print the size of the set
+		
+		// clear all elements in the set
+		namesSet.clear();
+		
+		System.out.println("The set after removing all the elements " + namesSet);
+		System.out.println("Size of the set after removing the elements is " + namesSet.size());
+	}
+}
+
+
+
+
+package q24095;
+import java.util.*;
+public class SetDemo {
+	public static void main(String[] args) {
+		Set<String> namesSet = new HashSet <String> ();
+// write your code here
+
+// iterate over the set using iterator and print the output
+for(int i=0;i<args.length;i++) namesSet.add(args[i]);
+
+Iterator<String> iterate = namesSet.iterator();
+
+
+
+while(iterate.hasNext()) {
+	
+	System.out.println(iterate.next());
+	
+}
+
+
+		
+	}
+}
+
+
+					// ---> E N D <--- //
+
