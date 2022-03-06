@@ -21,9 +21,8 @@ class B<T> { // statement 2
 
 B b1 = new B(); // statement 3
 
-=> ANSWER :-
 B<String> b1 = new B<String>(); // statement 4
+
+			=> ANSWER :-
 In statement 1, class A is called a non-generic class.
 In statement 2, class B is called a generic class.
-Statement 3 will result in compilation error. Since class B is a generic class, we should pass some type argument during instantiation.
-In statement 4, String is called type parameter.
