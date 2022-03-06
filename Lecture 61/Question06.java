@@ -22,11 +22,13 @@ List<String> cList = new ArrayList<>();			// statement 3
 List<String[]> dList = new ArrayList<String[]>();	// statement 4
 List<String> eList = new ArrayList();			// statement 5
 List fList = new ArrayList<String>();			// statement 6
-Statement 1 is an example of raw type.
-Statement 2 and Statement 3 mean the same.
-Statement 4 will result in compilation errors, since both List and ArrayList are parameterized with E as type parameter, meaning they can accept only individual elements and not a String array.
-Compiler will produce a type conversion warning for Statement 5.
-Compiler will not produce a type conversion warning for Statement 6.
+
+   ------> A N S W E R <------
+
+A.) Statement 1 is an example of raw type.
+B.) Statement 2 and Statement 3 mean the same.
+D.) Compiler will produce a type conversion warning for Statement 5.
+E.) Compiler will not produce a type conversion warning for Statement 6.
 
   
   
