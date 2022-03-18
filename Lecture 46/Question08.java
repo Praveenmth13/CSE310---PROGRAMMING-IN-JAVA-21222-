@@ -1,22 +1,24 @@
-package q11589;
+package q11590;
 import java.util.*;
 import java.text.SimpleDateFormat;
 import java.text.ParseException;
-public class CalendarDemo {
-	public String setTime(String dateString) throws ParseException {
+public class CalendarAddition {
+	public String addDays(String dateString, int days) throws ParseException {
 		// use the correct format string as argument for the constructor
 		SimpleDateFormat sd = new SimpleDateFormat("MMM-dd-yyyy");
 		
 		// parses text from the beginning of the given string to produce a date
 		Date date =  sd.parse(dateString);
+
+		Calendar cal = Calendar.getInstance();
 		
-		
-		Calendar currentTime = Calendar.getInstance();
-		
-		//// configuring the current object to the value of date
-    	currentTime.setTime(date);
-    	
-    	// format method on SimpleDateFormat returns a string representation of the passed date
-    	return sd.format(currentTime.getTime());
+		// configuring the cal object to the value of date
+		cal.setTime(date);
+
+		// supply the correct arguments to the add method below
+		cal.add(Calendar.DATE,days);
+
+		// format method on SimpleDateFormat returns a string representation of the passed date
+		return sd.format(cal.getTime());
 	}
 }
