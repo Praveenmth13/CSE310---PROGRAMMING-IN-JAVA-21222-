@@ -10,4 +10,4 @@ Which code fragment, inserted at // insert code here, allows the code to compile
 
 [Hint: Click on Date and DateFormat to explore the methods.]
 
-D.) df = DateFormat.getInstance(); //ANSWER
+E.) df = DateFormat.getInstance(); //ANSWER
