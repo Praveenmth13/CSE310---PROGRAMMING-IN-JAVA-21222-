@@ -21,14 +21,13 @@ class InsufficientFundsException extends Exception {
 		this.amount=amount;
 	}
 	public double getAmount() {
-	 return amount;
+		return amount;
 	}
 }
 class CheckingAccount {
 	private double balance;
 	private int accountNumber;
 	public CheckingAccount(int number) {
-		// initialize
 		accountNumber=number;
 	}
 	public void deposit(double amount) {
@@ -37,17 +36,17 @@ class CheckingAccount {
 	}
 	public void withdraw(double amount) throws InsufficientFundsException {
 		if(balance>amount) { // if sufficent balance is there
-			// deduct the amount from balance
-			balance=balance-amount;
+		// deduct the amount from balance
+		balance=balance-amount;
 		} else {
-			throw new InsufficientFundsException(amount-balance); // send insufficient amount
+			throw new InsufficientFundsException(amount-balance); // send insufficient amount 
 		}
 	}
-	public double getBalance() {
-		return balance;
-		
+		public double getBalance() {
+			return balance;
+					
+		}
+		public int getNumber() {
+			return accountNumber;
+		}
 	}
-	public int getNumber() {
-		 return accountNumber;
-	}
-}
