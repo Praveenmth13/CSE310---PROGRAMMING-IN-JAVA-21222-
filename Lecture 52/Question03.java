@@ -11,35 +11,22 @@ public class ThreadDemo {
 		t2.join();
 		t3.join();
 		System.out.println("All the three threads t1, t2 and t3 have completed execution.");
-    }
+	}
 }
 class Printer implements Runnable {
 	private String message;
-	
 	private int delay,count;
-	
 	public Printer(String message,int delay,int count) {
-		
 		this.message = message;
-		
 		this.delay=delay;
-		
 		this.count=count;
-		
 	}
-	
 	public void run() {
-	//	long value =delay*1000;
-		
+		//	long value =delay*1000;
 		for (int i = 0; i < count; i++) {
-			
-		//	Thread.sleep(value);
+			//	Thread.sleep(value);
 			
 			System.out.println(message);
-			
 		}
-		
 	}
-	
-	
 }
