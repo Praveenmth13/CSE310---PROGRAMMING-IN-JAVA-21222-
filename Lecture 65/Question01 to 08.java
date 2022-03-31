@@ -69,3 +69,46 @@ class PredicateInterface{
 
 
 
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+interface FuncInterface {
+	void AbstractFunction(int A);
+	default void GeneralFunction() {
+		System.out.println("Welcome");
+	}
+}
+class LambdaExpression {
+	public static void main(String args[]) {
+		FuncInterface fobj = (int A) -> System.out.println(10 + A);
+		fobj.AbstractFunction(15);
+	}
+}
+
+
+
+
+// Implementation of basic lambda expressions to print all and  even elements in the array list
+import java.util.ArrayList;
+class LambdaExpression{
+	public static void main(String args[]){
+		// Creating an ArrayList with 100, 203, 300, & 405 as elements
+		ArrayList<Integer> ArrList = new ArrayList<Integer>();
+		ArrList.add(100);
+		ArrList.add(203);
+		ArrList.add(300);
+		ArrList.add(405);
+		// Display elements using lambda expression 
+		ArrList.forEach(n -> System.out.println(n));
+		// Lambda expression to print even elements
+		System.out.println("All even elements displayed");
+		ArrList.forEach(n -> { if (n%2 == 0) System.out.println(n); });
+		
+	}
+}
+
+
+
+
+
+
