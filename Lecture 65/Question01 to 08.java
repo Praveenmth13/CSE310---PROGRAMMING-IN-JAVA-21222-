@@ -132,3 +132,27 @@ class LambdaExpression{
 
 
 
+
+// Type your code here
+public class Lambda2Arguments {
+	interface Operation1 {
+		int operation(int a, int b);
+	}
+	interface Operation2 {
+		void Message(String message);
+		
+	}
+		private int operate(int P, int Q, Operation1 Obj) {
+			return Obj.operation(P, Q);
+		}
+		public static void main(String args[]) {
+			Operation1 Add = (int x, int y) -> x + y;
+			Operation1 Mult = (int x, int y) -> x * y;
+			Lambda2Arguments Tobj = new Lambda2Arguments();
+			System.out.println("Addition is " + Tobj.operate(600, 700, Add));
+			System.out.println("Multiplication is " +
+			Tobj.operate(60, 30, Mult));
+			Operation2 Fobj = message -> System.out.println("CodeTantra " + message);
+			Fobj.Message("Lets Code");
+		}
+}
